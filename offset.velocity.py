@@ -1,5 +1,6 @@
 '''
-This code calculates the velocity offset or radial velocity of an object at either high
+This code calculates the velocity offset between two redshifts (Lyman-alpha 
+vs another line, for example) or the radial velocity of an object at either high
 or low redshift, specified by the redshift flag
 '''
 
