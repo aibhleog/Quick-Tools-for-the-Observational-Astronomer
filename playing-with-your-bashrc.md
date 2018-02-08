@@ -43,16 +43,16 @@ something that you would have to have.
 Below I'll show you how I've set up the aliases in my `.bashrc` for the `python` scripts shared in this repository. 
 ```
 # alias for velocity offset btw two z -- useful for z(Lyman-alpha) and z(systemic)
-alias offset='python /home/aibhleog/Desktop/keckData/information/offset.velocity.py'
+alias offset='python /home/aibhleog/path/to/offset.velocity.py'
 
 # alias for redshifted wavelength
-alias zlam='python /home/aibhleog/Desktop/keckData/information/redshift.lam.py'
+alias zlam='python /home/aibhleog/path/to/redshift.lam.py'
 
 # alias for redshift given two wavelengths
-alias redshift='python /home/aibhleog/Desktop/keckData/information/redshift.py'
+alias redshift='python /home/aibhleog/path/to/redshift.py'
 
 # alias for wavelength of given line
-alias line='python /home/aibhleog/Desktop/keckData/information/lines.py'
+alias line='python /home/aibhleog/path/to/lines.py'
 ```
 So, to see them in use:
 ```
