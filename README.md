@@ -8,5 +8,5 @@ Mostly they are scripts I've integrated into my .bashrc (which I will describe) 
 + **redshift.py** -- calcuates the redshift given a restframe wavelength (in Angstroms) and a redshifted wavelength (in Angstroms)
 + **lines.py** -- returns restframe wavelength(s) of a line given the line's key (string; ie. 'ha' for H-alpha)
 
-Be sure to look at `playing-with-your-bashrc.md` for an outline of how to integrate the `python` scripts into your terminal!
+Be sure to look at **`playing-with-your-bashrc.md`** for an outline of how to integrate the `python` scripts into your terminal!
 ##### NOTE: the scripts assume your default `python` is `python 3.6.0`
