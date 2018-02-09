@@ -22,6 +22,7 @@ def radial_vel(z1,z2,high):
 		print()
 	elif high == False:
 		# for low-z, don't need to account for relativistic effects
+		print('Low redshift specified')
 		v1 = 2.998e5 * z1
 		if z2 == 0.:
 			print('Radial velocity of specified redshift: %s km/s'%(v1))
