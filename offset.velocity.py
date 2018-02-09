@@ -1,7 +1,12 @@
 '''
 This code calculates the velocity offset between two redshifts (Lyman-alpha 
 vs another line, for example) or the radial velocity of an object at either high
-or low redshift, specified by the redshift flag
+or low redshift, specified by the redshift flag.
+
+NOTE FOR SCRIPTING: if you want the radial velocity at low redshift, you will still 
+need to list a second redshift, but put '0.' followed by the 'False' keyword for the 
+high-z flag.
+	Example: run offset.velocity.py 0.24 0. False
 '''
 
 import numpy as np
