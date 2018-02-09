@@ -5,7 +5,7 @@ Although, as a warning, once you start tweaking your `.bashrc`, it's hard to sto
 ### I. Finding your `.bashrc` file
 In case you're unsure of where this file is located, open your terminal to your home directory (`~/`) and type ```ls --all```. 
 Among the list of hidden (start with '.') and visible folders and files, you'll see the `.bashrc` file.
-Open it in either your default text editor (ie. gedit) or edit it in the terminal by typing `nano .bashrc`.
+Open it in either your default text editor (ie. `gedit .bashrc &`) or edit it in the terminal by typing `nano .bashrc`.
 
 Generally, unless you've modified it before, your `.bashrc` should look something like this:
 ```
