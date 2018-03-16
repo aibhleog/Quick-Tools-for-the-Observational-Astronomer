@@ -53,6 +53,17 @@ alias redshift='python /home/aibhleog/path/to/redshift.py'
 
 # alias for wavelength of given line
 alias line='python /home/aibhleog/path/to/lines.py'
+
+# alias for separation between two coordinates of same units
+alias sep='python /home/aibhleog/path/to/separation.py'
+
+# alias for separation between two coordinates of different units
+# NOTE: put decimal units second
+alias sepmix='python /home/aibhleog/path/to/separation-mix.py
+
+# alias for converting coordinates to specified form
+alias coord='python /home/aibhleog/path/to/convert-coord.py
+
 ```
 So, to see them in use:
 ```
@@ -71,6 +82,12 @@ Velocity offset of specified redshifts: 21.391620782755577 km/s
 [aibhleog@earth ~]$ offset 0.5 0.502 False
 Low redshift specified
 Velocity offset of specified redshifts: 599.6000000000058 km/s
+
+[aibhleog@earth ~]$ coord 00h00m00s +00d00m00s decimal
+Coordinate: 0 0
+
+[aibhleog@earth ~]$ coord 0.00 +0.00 '' false
+Coordinate: 00h00m00s +00d00m00s
 ```
 ### *That's it!*
 I hope you have fun playing with your `.bashrc` and modifying it to improve your productivity!
