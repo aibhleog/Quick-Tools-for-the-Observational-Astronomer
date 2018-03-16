@@ -7,6 +7,9 @@ Mostly they are scripts I've integrated into my `.bashrc` (which I will describe
 + **redshift.lam.py** -- calculates the redshifted wavelength (in Angstroms) of a line given a restframe wavelength and a redshift
 + **redshift.py** -- calcuates the redshift given a restframe wavelength (in Angstroms) and a redshifted wavelength (in Angstroms)
 + **lines.py** -- returns restframe wavelength(s) of a line given the line's key (string; ie. 'ha' for H-alpha)
++ **convert-coord.py** -- converts ra and dec coordinates to specified units
++ **separation.py** -- calculates separation between two ra and dec coordinates (provided they are in the same units)
++ **separation-mix.py** -- calculates separation between two ra and dec coordinates (given two different units)
 
 Be sure to look at **`playing-with-your-bashrc.md`** for an outline of how to integrate the `python` scripts into your terminal!
 ##### NOTE: the scripts assume your default `python` is `python 3.6.0`
