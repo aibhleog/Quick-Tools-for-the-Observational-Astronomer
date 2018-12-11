@@ -5,10 +5,14 @@ As many lines can be added as wanted.
 
 import numpy as np
 # currently holds the lines I use most frequently in my work
-dic = {'ha':6562.8,'ciii':[1906.8,1908.78],'lya':1215.67,\
-	'civ':1548.48,'oiii':[4959.,5007.],'cii':2326.0,'mgii':2799.12,\
-	'nv':1240.81,'siiv':1397.61,'heii':1640.4,'hei':3889.0,\
-	'hbeta':4862.68}
+dic = {'ha':6562.8,'c.iii]':[1906.8,1908.78],'lya':1215.67,\
+	'c.iv':1548.48,'o.ii':[3726.1,3728.8],'o.iii':[4959.,5007.],\
+	'si.iii]':[1882.71,1892.03],'cii':2326.0,'mg.ii':2799.12,'o.iii]':[1660.81,1666.15],\
+	'n.v':1240.81,'ne.v':3426,'si.iv':1397.61,'he.ii':1640.4,'he.i':[3889,5876],\
+	's.ii':[6717,6731],'hbeta':4862.68,'ne.iii':3869.81,'n.ii':[6549.81,6585.23],\
+	'si.iv+o.iv]':1400,'niv]':1486}
+# SiIV+OIV] blend in AGN: https://arxiv.org/pdf/1312.7500.pdf
+
 
 # given a line, returns the wavelength(s)
 def which_lines(line):
