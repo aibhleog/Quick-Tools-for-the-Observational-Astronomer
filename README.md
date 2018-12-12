@@ -10,6 +10,7 @@ Mostly they are scripts I've integrated into my `.bashrc` (which I will describe
 + **convert-coord.py** -- converts ra and dec coordinates to specified units
 + **separation.py** -- calculates separation between two ra and dec coordinates (provided they are in the same units)
 + **separation-mix.py** -- calculates separation between two ra and dec coordinates (given two different units)
++ **de.redshift.py** -- calculates the de-redshifted wavelength given a redshift and an observed wavelength
 
 Be sure to look at **`playing-with-your-bashrc.md`** for an outline of how to integrate the `python` scripts into your terminal!
 ##### NOTE: the scripts assume your default `python` is `python 3.6.0`
