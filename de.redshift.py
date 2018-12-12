@@ -1,6 +1,7 @@
 '''
 This script calculates the wavelength of a line (in Angstroms) given its
 observed wavelength (in Angstroms) and a redshift.
+---> I don't use this one very often, but the few times I have it's been useful!
 '''
 
 import numpy as np
