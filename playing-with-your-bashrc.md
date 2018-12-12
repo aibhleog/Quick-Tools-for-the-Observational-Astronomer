@@ -64,6 +64,10 @@ alias sepmix='python /home/aibhleog/path/to/separation-mix.py
 # alias for converting coordinates to specified form
 alias coord='python /home/aibhleog/path/to/convert-coord.py
 
+# alias for de-redshifting an observed wavelength given a redshift
+### diclaimer: I don't use this one very often but it is helpful
+alias dered='python /home/aibhleog/path/to/de.redshift.py
+
 ```
 So, to see them in use:
 ```
@@ -88,6 +92,9 @@ Coordinate: 0 0
 
 [aibhleog@earth ~]$ coord 0.00 +0.00 '' false
 Coordinate: 00h00m00s +00d00m00s
+
+[aibhleog@earth ~]$ dered 32814.0 4.0
+De-redshifted line: 6562.8 angstroms
 ```
 ### *That's it!*
 I hope you have fun playing with your `.bashrc` and modifying it to improve your productivity!
