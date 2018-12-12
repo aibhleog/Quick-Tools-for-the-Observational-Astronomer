@@ -65,7 +65,7 @@ alias sepmix='python /home/aibhleog/path/to/separation-mix.py
 alias coord='python /home/aibhleog/path/to/convert-coord.py
 
 # alias for de-redshifting an observed wavelength given a redshift
-### diclaimer: I don't use this one very often but it is helpful
+### disclaimer: I don't use this one very often but it is helpful
 alias dered='python /home/aibhleog/path/to/de.redshift.py
 
 ```
