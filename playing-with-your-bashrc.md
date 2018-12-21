@@ -38,6 +38,7 @@ you would be able to type ```jn file.ipynb``` to open a particular file or simpl
 The difference isn't that great, but those few seconds you save (and in my case the many seconds saved from my misspelling 
 one or both of those words due to typing quickly) add up over time. But again, this is mostly a convenience -- not at all
 something that you would have to have.
+##### NOTE: be sure to check that the aliases you make aren't already associated with commands in your terminal.  The easiest way to check this is to open your terminal and type the alias name you want and press [Tab] a few times.  If nothing with your exact spelling (and nothing extra) pops up, then you're good to use it as an alias!
 
 ### III. Setting aliases for the 'Quick Tools' `python` scripts
 Below I'll show you how I've set up the aliases in my `.bashrc` for the `python` scripts shared in this repository. 
