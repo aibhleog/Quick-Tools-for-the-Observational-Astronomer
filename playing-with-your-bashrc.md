@@ -42,6 +42,9 @@ something that you would have to have.
 ### III. Setting aliases for the 'Quick Tools' `python` scripts
 Below I'll show you how I've set up the aliases in my `.bashrc` for the `python` scripts shared in this repository. 
 ```
+# alias for printing all current python scripts by their aliases
+alias pycommands='python /home/aibhleog/path/to/all_pycommands.py'
+
 # alias for velocity offset btw two z -- useful for z(Lyman-alpha) and z(systemic)
 alias offset='python /home/aibhleog/path/to/offset.velocity.py'
 
@@ -96,6 +99,21 @@ Coordinate: 00h00m00s +00d00m00s
 [aibhleog@earth ~]$ dered 32814.0 4.0
 De-redshifted line: 6562.8 angstroms
 ```
+And finally, the new script I've added, called **all_pycommands.py** (defined with an alias **pycommands** at the top of the list above), would output the following:
+```
+CURRENT PYTHON COMMANDS:
+-----------------------------
+line -- returns restframe wavelength of a line given a key
+offset -- calculates the velocity offset between two redshifts
+redshift -- calculates the redshift given a restframe & observed line
+zlam -- redshifts a line given restframe wavelength and redshift
+dered -- returns the rest wavelength given an observed line and redshift
+
+sep -- returns the separation between two coordinates of same units
+sepmix -- returns the separation between two coordinates of different units
+coord -- converts given coordinates to a specified format
+```
+This is very helpful for me personally, because I keep adding more and more things to my `.bashrc` so it's hard to keep track without this!
 ### *That's it!*
 I hope you have fun playing with your `.bashrc` and modifying it to improve your productivity!
 
