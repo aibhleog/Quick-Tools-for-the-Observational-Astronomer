@@ -1,7 +1,6 @@
 '''
-This script calculates the wavelength of a line (in Angstroms) given
-1. its restframe wavelength (in Angstroms)
-2. a redshift
+This script calculates the wavelength of a line (in Angstroms) given its
+restframe wavelength (in Angstroms) and a redshift.
 '''
 
 import numpy as np
@@ -13,4 +12,9 @@ def redshift_which(lam0,z):
 # reads in input when scripting
 if __name__ == "__main__":
 	import sys
-	redshift_which(float(sys.argv[1]),float(sys.argv[2]))
+	if sys.argv[1] == 'help':
+		print('\nThis script calculates the wavelength of a line (in Angstroms) given\n' 
+			'its restframe wavelength (in Angstroms) and a redshift.\n')
+		print('Use the follwing notation:   zlam [rest wavelength] [redshift]\n')
+	else:
+		redshift_which(float(sys.argv[1]),float(sys.argv[2]))

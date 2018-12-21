@@ -41,14 +41,29 @@ def convert(c1,c2,out,notdeg):
 # reads in input when scripting
 if __name__ == "__main__":
 	import sys
-	try:
-		out = sys.argv[3]
-	except IndexError:
-		out = ''
-	try:
-		yeshi = sys.argv[4]
-		yeshi = yeshi == 'True' or yeshi == 'true'
-	except IndexError:
-		yeshi = True
-	convert(str(sys.argv[1]),str(sys.argv[2]),str(out),bool(yeshi))
+	if sys.argv[1] == 'help':
+		print('''
+Converting coordinate to specified form.
+Default is hmsdms.
+
+-----------------
+TO USE AS SCRIPT:	(notice the syntax)
+-----------------
+To get output in form of decimal units:
+   type 'python convert-coord.py 00h00m00s +00d00m00s decimal'
+
+If you want the coordinates in hmsdms:
+   type 'python convert-coord.py 00.000 +0.000 '' false'
+   ---> note that you need to add an empty string ''.\n''')
+	else:
+		try:
+			out = sys.argv[3]
+		except IndexError:
+			out = ''
+		try:
+			yeshi = sys.argv[4]
+			yeshi = yeshi == 'True' or yeshi == 'true'
+		except IndexError:
+			yeshi = True
+		convert(str(sys.argv[1]),str(sys.argv[2]),str(out),bool(yeshi))
 		

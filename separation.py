@@ -62,15 +62,40 @@ def sep_coordinates(c1ra,c1dec,c2ra,c2dec,out,notdeg):
 # reads in input when scripting
 if __name__ == "__main__":
 	import sys
-	try:
-		out = sys.argv[5]
-	except IndexError:
-		out = ''
-	try:
-		yeshi = sys.argv[6]
-		yeshi = yeshi == 'True' or yeshi == 'true'
-	except IndexError:
-		yeshi = True
-	sep_coordinates(str(sys.argv[1]),str(sys.argv[2]),str(sys.argv[3]),\
-		str(sys.argv[4]),str(out),bool(yeshi))
+	if sys.argv[1] == 'help':
+		print('''
+Calculating the separation between two points given their ra and dec.
+Coordinates can be given in hh:mm:ss +dd:mm:ss or hour and decimal degrees,
+specified by the degree flag. 
+
+NOTE: both coordinates must be in the same format -- use separation-mix.py
+if they are not.
+
+-----------------
+TO USE AS SCRIPT:	(notice the syntax)
+-----------------
+To get output in form of arcminutes:
+   type 'python separation.py 00h00m00s +00d00m00s 00h00m00s +00d00m00s arcmin'
+
+The same as above but with decimal hour & degrees:
+   type 'python separation.py 00.000 +0.000 00.000 +0.000 arcmin false'
+
+If you want the separation in degrees:
+   type 'python separation.py 00h00m00s +00d00m00s 00h00m00s +00d00m00s'
+   type 'python separation.py 00.000 +0.000 00.000 +0.000 '' false'
+   ---> note that you don't need to type anything if in hmsdms units,
+        but you need to add an empty string '' if in decimal units.\n''')		
+
+	else:
+		try:
+			out = sys.argv[5]
+		except IndexError:
+			out = ''
+		try:
+			yeshi = sys.argv[6]
+			yeshi = yeshi == 'True' or yeshi == 'true'
+		except IndexError:
+			yeshi = True
+		sep_coordinates(str(sys.argv[1]),str(sys.argv[2]),str(sys.argv[3]),\
+			str(sys.argv[4]),str(out),bool(yeshi))
 		

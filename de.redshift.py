@@ -1,7 +1,7 @@
 '''
 This script calculates the wavelength of a line (in Angstroms) given its
 observed wavelength (in Angstroms) and a redshift.
----> I don't use this one very often, but the few times I have it's been useful!
+---> I don't use this one very often but when I do it's helpful!
 '''
 
 import numpy as np
@@ -13,4 +13,10 @@ def de_redshift(lam,z):
 # reads in input when scripting
 if __name__ == "__main__":
 	import sys
-	de_redshift(float(sys.argv[1]),float(sys.argv[2]))
+	if sys.argv[1] == 'help':	
+		print("\nThis script calculates the wavelength of a line (in Angstroms) given\n" 
+			"its observed wavelength (in Angstroms) and a redshift.\n"
+			"---> I don't use this one very often but when I do it's helpful!\n")
+		print('Use the following notation:   dered [observed wavelength] [redshift]\n')
+	else:
+		de_redshift(float(sys.argv[1]),float(sys.argv[2]))
