@@ -7,8 +7,8 @@ This script calculates the redshift between two lines given
 import numpy as np
 # returns the redshift of the line
 def redshift_which(lam0,lam):
-	print('Redshift: %s'%((lam/lam0) - 1))
-	print()
+	print('Redshift: %s'%((lam/lam0) - 1),end='\n\n')
+
 
 # reads in input when scripting
 if __name__ == "__main__":

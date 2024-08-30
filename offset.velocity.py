@@ -12,18 +12,18 @@ def radial_vel(z1,z2,high):
 	if high == True:
 		# for high-z, currently only returns the difference
 		delv = 2.998e5 * (z2 - z1) / (1 + z1)
-		print('Velocity offset of specified redshifts: %s km/s'%(delv))
-		print()
+		print(f'Velocity offset of specified redshifts: {delv} km/s',end='\n\n')
 	elif high == False:
+	
 		# for low-z, don't need to account for relativistic effects
 		v1 = 2.998e5 * z1
 		if z2 == 0.:
-			print('Radial velocity of specified redshift: %s km/s'%(v1))
-			print()
+			print(f'Radial velocity of specified redshift: {v1} km/s',end='\n\n')
+
 		else:
 			v2 = 2.998e5 * float(z2)
-			print('Velocity offset of specified redshifts: %s km/s'%(v1-v2))
-			print()
+			print(f'Velocity offset of specified redshifts: {v1-v2} km/s',end='\n\n')
+
 
 # the following reads in input -- so that script can be run from terminal
 if __name__ == "__main__":

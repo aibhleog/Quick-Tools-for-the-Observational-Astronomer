@@ -6,8 +6,21 @@ restframe wavelength (in Angstroms) and a redshift.
 import numpy as np
 # returns the redshifted line
 def redshift_which(lam0,z):
-	print(r'Redshifted line: %s angstroms'%(lam0 * (z + 1)))
-	print()
+
+	if np.log10(lam0) > 2: units_scale = 1e4 # angstroms --> microns
+	else: 
+		units_scale = 1 # microns
+		
+	units = 'microns'
+	zlam = (lam0/units_scale) * (z + 1)
+	
+	# if the redshifted value is below 1 micron
+	if np.log10(zlam) < 0: 
+		zlam *= 1e4 # microns --> angstroms
+		units = 'angstroms'
+	
+	print(f'Redshifted line: {zlam} {units}',end='\n\n')
+
 
 # reads in input when scripting
 if __name__ == "__main__":

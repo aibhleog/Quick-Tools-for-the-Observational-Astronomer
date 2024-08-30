@@ -7,7 +7,16 @@ observed wavelength (in Angstroms) and a redshift.
 import numpy as np
 # returns the redshifted line
 def de_redshift(lam,z):
-	print(r'De-redshifted line: %s angstroms'%(lam / (z + 1)))
+	if np.log10(lam) > 2: units_scale = 1 # angstroms
+	else: units_scale = 1e4 # microns --> angstroms
+	
+	dered = (lam*units_scale) / (z + 1)
+	if np.log10(dered) >= 4: 
+		dered /= 1e4 # angstroms --> microns
+		units = 'microns'
+	else: units = 'angstroms'
+	
+	print(f'De-redshifted line: {dered} {units}')
 	print()
 
 # reads in input when scripting
