@@ -1,6 +1,6 @@
 
 '''
-Code used to add the lines into the zlines script.
+Code used to add the lines into the zlines script.   Can also be imported as a module.
 
 Requires an axes variable, a y-axis value, and a redshift.
 
@@ -8,10 +8,11 @@ Optional commands include:
     text flag : defaults 'yes', will add lines if 'yes'
     aa flag : defaults False; will convert to angstroms if True
     xlim flag : defaults False; will cut down line list if True
+    exclude flag : defaults None; will exclude certain lines using their dictionary key
 
 
 NOTES:
-Eventually would like to include a way to EXCLUDE specific lines, in addition to the zooming in on lines that I already have.
+yes this is a hot mess and no I'm not fixing that at the moment
 
 '''
 
