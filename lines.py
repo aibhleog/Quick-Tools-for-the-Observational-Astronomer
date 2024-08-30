@@ -1,6 +1,9 @@
 '''
 This script returns the restframe wavelength(s) of any line in the dictionary below.
 As many lines can be added as wanted.
+
+Some line wavelengths come from:
+http://astronomy.nmsu.edu/drewski/tableofemissionlines.html
 '''
 
 import numpy as np
@@ -8,14 +11,16 @@ import pandas as pd
 
 # currently holds the lines I use most frequently in my work
 # absorption lines are marked as negative
-dic = {'lya':1215.67,'n.v':[1238.82,1242.8],'si.iv':1397.61,'si.iv+o.iv]':1400,\
-		'niv]':1486,'c.iv':[1548.19,1550.76],'he.ii':1640.4,'o.iii]':[1660.81,1666.15],\
-		'si.iii]':[1882.71,1892.03],'c.iii]':[1906.68,1908.73],'cii':2326.0,\
+dic = {'lya':1215.67,'n.v':[1238.82,1242.8],'si.iv':[1393.755,1403.77],'o.iv]':[1397.232,1399.78],\
+		'n.iv]':1486.496,'c.iv':[1548.19,1550.76],'he.ii':1640.4,'o.iii]':[1660.81,1666.15],\
+		'si.iii]':[1882.71,1892.03],'c.iii]':[1906.68,1908.73],'c.ii':2326.0,\
 		'mg.ii':[2795.53,2802.71],'ne.v':3426,'o.ii':[3726.1,3728.8],\
 		'ne.iii':3869.81,'hdelta':4102.89,'hgamma':4340.462,'hbeta':4862.68,\
 		'o.iii':[4959.,5007.],'he.i':5876,'n.ii':[6549.81,6585.23],\
 		's.ii':[6717,6731],'ha':6562.8,'hepsilon':3970.072,\
-		'ca.h+k':[-3968.47,-3933.66]}
+		'ca.h+k':[-3968.47,-3933.66], 'o.i':[6302,6365.5],
+		'paalpha':18750, 'pabeta':12820, 'pagamma':10940,
+		'bralpha':40510,'brbeta':26250,'brgamma':21660}
 
 # SiIV+OIV] blend in AGN: https://arxiv.org/pdf/1312.7500.pdf
 
