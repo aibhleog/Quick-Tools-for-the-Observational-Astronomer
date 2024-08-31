@@ -49,6 +49,9 @@ alias pycommands='python /home/aibhleog/path/to/all_pycommands.py'
 # alias for velocity offset btw two z -- useful for z(Lyman-alpha) and z(systemic)
 alias offset='python /home/aibhleog/path/to/offset.velocity.py'
 
+# alias for plot of redshifted spectrum with bandpasses overlaid
+alias zlines='python /home/aibhleog/path/to/bandpass_zlines.py'
+
 # alias for redshifted wavelength
 alias zlam='python /home/aibhleog/path/to/redshift.lam.py'
 
@@ -79,7 +82,7 @@ So, to see them in use:
 Restframe: 6562.8 angstroms
 
 [aibhleog@earth ~]$ zlam 6562.8 4.0
-Redshifted line: 32814.0 angstroms
+Redshifted line: 3.2814 microns
 
 [aibhleog@earth ~]$ redshift 6562.8 32814.0
 Redshift: 4.0
@@ -97,7 +100,7 @@ Coordinate: 0 0
 [aibhleog@earth ~]$ coord 0.00 +0.00 '' false
 Coordinate: 00h00m00s +00d00m00s
 
-[aibhleog@earth ~]$ dered 32814.0 4.0
+[aibhleog@earth ~]$ dered 3.2814 4.0
 De-redshifted line: 6562.8 angstroms
 ```
 And finally, the new script I've added, called **all_pycommands.py** (defined with an alias **pycommands** at the top of the list above), would output the following:
@@ -109,6 +112,7 @@ offset -- calculates the velocity offset between two redshifts
 redshift -- calculates the redshift given a restframe & observed line
 zlam -- redshifts a line given restframe wavelength and redshift
 dered -- returns the rest wavelength given an observed line and redshift
+zlines -- pops up a plot that shows a model spectrum redshifted with bandpasses overlaid
 
 sep -- returns the separation between two coordinates of same units
 sepmix -- returns the separation between two coordinates of different units
